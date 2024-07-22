@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Young-Serif";
+  src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-SemiBold.ttf") format("truetype");
+  font-weight: semi-bold;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/outfit/static/Outfit-Light.ttf") format("truetype");
+  font-weight: light;
+}
+:root {
+  font-family: "Outfit";
+  color: hsl(24, 5%, 18%);
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  padding: 5px 20px;
+}
+
+hr {
+  background-color: hsl(30, 18%, 87%);
+  height: 1px;
+  border: none;
+  margin: 20px 0 10px 0;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recipe-container-body {
+  padding: 25px;
+}
+.recipe-container-body-title {
+  font-family: "Young-Serif";
+  font-weight: normal;
+  line-height: 1em;
+  font-size: 2.2rem;
+}
+.recipe-container-body-paragraph {
+  padding: 15px 0;
+}
+.recipe-container-body-coloured-list {
+  padding: 20px 25px;
+  margin: 20px 0;
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 10px;
+}
+.recipe-container-body-coloured-list ul {
+  padding-left: 25px;
+}
+.recipe-container-body-coloured-list li::marker {
+  color: hsl(332, 51%, 32%);
+}
+.recipe-container-body-coloured-list #preparation-time {
+  color: hsl(332, 51%, 32%);
+  font-family: "Outfit";
+  font-size: 1.3rem;
+}
+.recipe-container-body-header {
+  color: hsl(14, 45%, 36%);
+  font-family: "Young-Serif";
+  font-weight: normal;
+  font-size: 1.7rem;
+  padding: 15px 0;
+}
+.recipe-container-body-table {
+  width: 100%;
+  margin: 10px 0;
+}
+.recipe-container-body-table td:first-child {
+  padding-left: 30px;
+}
+.recipe-container-body-table tr td {
+  padding: 10px 0;
+}
+.recipe-container-body-table tr td:last-child {
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
+.recipe-container-body-table tr:not(:last-child) td {
+  width: 10px;
+  border-bottom: 1px hsl(30, 18%, 87%) solid;
+}
+.recipe-container-list-instructions {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.recipe-container-list-instructions li::marker {
+  font-weight: bold;
+  color: hsl(14, 45%, 36%);
+}
+.recipe-container-list-ingredients {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.recipe-container-list-ingredients li::marker {
+  font-weight: bold;
+  color: hsl(14, 45%, 36%);
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    max-width: 40%;
+    margin: 50px auto;
+    background-color: #f3e5d8;
+  }
+  main {
+    background-color: white;
+    padding: 40px 20px 0 20px;
+    border-radius: 10px;
+  }
+  .recipe-container-image {
+    border-radius: 10px;
+    width: 95%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

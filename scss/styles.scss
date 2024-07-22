@@ -1,0 +1,149 @@
+@use "./abstracts" as a;
+@use "./layout/" as l;
+
+:root {
+  font-family: "Outfit";
+  color: a.$Stone-900;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+li {
+  @include l.list_elements;
+}
+
+hr {
+  @include l.vertical_line;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-body {
+    padding: 25px;
+
+    &-title {
+      font-family: "Young-Serif";
+      font-weight: normal;
+      line-height: 1em;
+      font-size: 2.2rem;
+    }
+
+    &-paragraph {
+      padding: 15px 0;
+    }
+
+    &-coloured-list {
+      padding: 20px 25px;
+      margin: 20px 0;
+      background-color: a.$Rose-50;
+      border-radius: 10px;
+
+      ul {
+        padding-left: 25px;
+      }
+
+      li::marker {
+        color: a.$Rose-800;
+      }
+
+      #preparation-time {
+        color: a.$Rose-800;
+        font-family: "Outfit";
+        font-size: 1.3rem;
+      }
+    }
+    &-header {
+      @include l.header;
+    }
+    &-table {
+      width: 100%;
+      margin: 10px 0;
+      td:first-child {
+        padding-left: 30px;
+      }
+
+      tr {
+        td {
+          padding: 10px 0;
+        }
+
+        td:last-child {
+          color: a.$Brown-800;
+          font-weight: bold;
+        }
+      }
+
+      tr:not(:last-child) {
+        td {
+          width: 10px;
+
+          border-bottom: 1px a.$Stone-150 solid;
+        }
+      }
+    }
+  }
+  &-list-instructions {
+    padding-left: 20px;
+    padding-right: 10px;
+
+    li::marker {
+      font-weight: bold;
+      color: a.$Brown-800;
+    }
+  }
+
+  &-list-ingredients {
+    padding-left: 20px;
+    padding-right: 10px;
+
+    li::marker {
+      font-weight: bold;
+      color: a.$Brown-800;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    max-width: 40%;
+    margin: 50px auto;
+    background-color: #f3e5d8;
+  }
+
+  main {
+    background-color: white;
+    padding: 40px 20px 0 20px;
+    border-radius: 10px;
+  }
+
+  .recipe-container-image {
+    border-radius: 10px;
+    width: 95%;
+  }
+}

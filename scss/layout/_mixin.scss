@@ -1,0 +1,20 @@
+@use "../abstracts/" as a;
+
+@mixin header {
+  color: a.$Brown-800;
+  font-family: "Young-Serif";
+  font-weight: normal;
+  font-size: 1.7rem;
+  padding: 15px 0;
+}
+
+@mixin list_elements {
+  padding: 5px 20px;
+}
+
+@mixin vertical_line {
+  background-color: a.$Stone-150;
+  height: 1px;
+  border: none;
+  margin: 20px 0 10px 0;
+}
